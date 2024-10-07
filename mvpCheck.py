@@ -32,7 +32,7 @@ def search_faiss(query: str) -> str:
     }
 
     try:
-        response = requests.get(url, headers=headers, json=payload)
+        response = requests.post(url, headers=headers, json=payload)
         response.raise_for_status()
 
         data = response.json()
